@@ -16,6 +16,8 @@ while (True):
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
         id, conf = rec.predict(gray[y:y + h, x:x + w])
         if (id == 1):
+            id = "Nihal"
+        if (id == 2):
             id = "Dasun"
         cv2.putText(
             img,
@@ -23,7 +25,7 @@ while (True):
             font,
             2.0, (0, 0, 255),
             lineType=cv2.LINE_AA)
-    cv2.imshow('frame', img)  # Show the window with the video.
+    cv2.imshow('Log In', img)  # Show the window with the video.
     if cv2.waitKey(1) & 0xFF == ord(
             'q'):  # Without the wait the library would not work.
         break
