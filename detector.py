@@ -16,8 +16,6 @@ while (True):
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
         id, conf = rec.predict(gray[y:y + h, x:x + w])
         if (id == 1):
-            id = "Nihal"
-        if (id == 2):
             id = "Dasun"
         cv2.putText(
             img,

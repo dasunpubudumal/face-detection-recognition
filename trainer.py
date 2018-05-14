@@ -2,6 +2,7 @@ import os
 import cv2
 import numpy as np
 from PIL import Image
+from tkinter import messagebox
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 path = "dataset"
@@ -24,5 +25,7 @@ def getImagesWithID(path):
 
 faces, ids = getImagesWithID(path)
 recognizer.train(faces, np.array(ids))
+messagebox.showwarning("Training", "Wait until it's trained!")
 recognizer.save('recognizer/training_data.yml')
+messagebox.showinfo("Success", "Successfull!")
 cv2.destroyAllWindows()
