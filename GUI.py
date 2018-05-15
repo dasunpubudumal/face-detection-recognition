@@ -26,10 +26,11 @@ bottomFrame.pack(side=BOTTOM)
 label = Label(topFrame, text="Face Recognizer").pack(side=TOP)
 
 datasetGeneratorBtn = Button(
-    topFrame, text="Generate Data", command=generateDataClick).pack(side=LEFT)
-trainBtn = Button(
-    topFrame, text="Train Data", command=trainerClick).pack(side=RIGHT)
+    topFrame, text="1. Generate Data",
+    command=generateDataClick).pack(side=LEFT)
 detectBtn = Button(
-    topFrame, text="Detect Face", command=detectorClick).pack(side=TOP)
+    topFrame, text="3. Detect Face", command=detectorClick).pack(side=RIGHT)
+trainBtn = Button(
+    topFrame, text="2. Train Data", command=trainerClick).pack(side=TOP)
 
 root.mainloop()
