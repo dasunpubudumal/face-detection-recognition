@@ -15,8 +15,8 @@ while (True):
         # For each face draw a rectangle around.
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
         id, conf = rec.predict(gray[y:y + h, x:x + w])
-        if (id == 1):
-            id = "Dasun"
+        # if (id == 1):
+        #     id = "Dasun"
         cv2.putText(
             img,
             str(id), (x, y + h),
