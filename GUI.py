@@ -3,15 +3,15 @@ import os
 
 
 def generateDataClick():
-    os.system('python3 dataset_creator.py')
+    os.system('python3 ./util/dataset_creator.py')
 
 
 def trainerClick():
-    os.system('python3 trainer.py')
+    os.system('python3 ./util/trainer.py')
 
 
 def detectorClick():
-    os.system('python3 detector.py')
+    os.system('python3 ./util/detector.py')
 
 
 root = Tk()

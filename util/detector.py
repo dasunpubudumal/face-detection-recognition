@@ -1,10 +1,15 @@
 import numpy as np
 import cv2
+import os
+my_path = os.path.abspath(os.path.dirname(__file__))
 
-detector = cv2.CascadeClassifier('data/haarcascade_frontalface_default.xml')
+detector = cv2.CascadeClassifier(
+    os.path.join(my_path, "../data/haarcascade_frontalface_default.xml"))
+
 cap = cv2.VideoCapture(0)
 rec = cv2.face.LBPHFaceRecognizer_create()
-rec.read('recognizer/training_data.yml')
+rec.read(os.path.join(my_path, '../recognizer/training_data.yml'))
+
 id = 0
 font = cv2.FONT_HERSHEY_COMPLEX
 while (True):

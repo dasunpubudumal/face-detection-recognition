@@ -5,7 +5,9 @@ from PIL import Image
 from tkinter import messagebox
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-path = "dataset"
+# path = "../dataset"
+my_path = os.path.abspath(os.path.dirname(__file__))
+path = os.path.join(my_path, "../dataset")
 
 
 def getImagesWithID(path):

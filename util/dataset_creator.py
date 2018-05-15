@@ -2,11 +2,13 @@ import numpy as np
 import cv2
 from tkinter import *
 from tkinter import messagebox
+import os
 
 
 def submitFunc(entryId, root):
+    my_path = os.path.abspath(os.path.dirname(__file__))
     detector = cv2.CascadeClassifier(
-        'data/haarcascade_frontalface_default.xml')
+        os.path.join(my_path, "../data/haarcascade_frontalface_default.xml"))
     cap = cv2.VideoCapture(0)
     identifier = entryId.get()
     sampleNumber = 0
